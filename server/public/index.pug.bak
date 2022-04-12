@@ -1,0 +1,137 @@
+doctype html
+style.
+    input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    }
+    input[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    }
+    input[type=submit]:hover {
+    background-color: #45a049;
+    }
+    div {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    }
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
+
+
+h1 Welcome to Diablo 2 Drop generator!
+b1 Click on the button to open the dropdown menu.
+  label (for="Monsters") Monsters
+  select (name="Monsters" id="Mon")
+    option(value="Baal"Baal)
+    option(value="Diablo"Diablo)
+    option(value="Mephisto"Mephisto)
+    option(value="Duriel"Duriel)
+    option(value="Andarial"Andarial)
+label (for="DifficultyA")Difficulty
+ select (name="Difficulty" id="DifA")
+    option(value="Normal"Normal)
+    option(value="Nightmare"Nightmare)
+    option(value="Hell"Hell)
+
+  </br></br>
+  input (type="submit" value="Find Monster Drops" onclick="MonsterS()")
+
+</br></br></br></br></br></br></br></br></br>
+  label (for="Items")Items
+  select( name="Items" id="It")
+    option(value="Harlequin''s Crest")Harlequin's Crest
+    option(value="Dracul''s Grasp")Dracul's Grasp
+    option(value="Arachnid Mesh")Arachnid Mesh
+    option(value="Blade of Ali Baba")Blade of Ali Baba
+    option(value="The Stone of Jordan")The Stone of Jordan
+	option(value="Skulder''s Ire")Skulder's Ire
+	option(value="Arianoc''s Needle")Arianoc's Needle
+	option(value="Tal Rasha''s Lidless Eye")Tal Rasha's Lidless Eye
+	option(value="Cloudkill")Cloudkill
+	option(value="Chance Gaurd")Chance Gaurd
+	option(value="Festering Essence of Destruction")Festering Essence of Destruction
+	option(value="Burning Essence of Terror")Burning Essence of Terror
+	option(value="Charged Essence of Hatred")Charged Essence of Hatred
+	option(value="Twisted Essence of Suffering")Twisted Essence of Suffering
+	option(value="Zod")Zod
+	option(value="Amn")Amn
+	option(value="Ral")Ral
+	option(value="Ist")Ist
+	option(value="Mal")Mal
+	option(value="Fal")Fal
+	option(value="Pul")Pul
+	option(value="Magic Items")Magic Items
+	option(value="gold")gold
+	option(value="Base Items")Base Items
+label (for="C_o_M")Chest or Monsters?
+ select( name="Chest or monsters" id="C_o_M")
+    option(value="Chests")Chests
+    option(value="Monsters")Monsters
+  </br></br>
+  input (type="submit" value="Look for loot droppers" onclick="ItemS()")
+
+</br></br></br></br></br></br></br></br></br>
+label (for="Chest")Chest
+ select (name="Chest" id="Chest")
+    option(value="Barbarian Chest")Barbarian Chest
+    option(value="Obsidian Chest")Obsidian Chest
+	option(value="Kurast Chest")Kurast Chest
+	option(value="Desert Chest")Desert Chest
+	option(value="Rogue''s Chest")Rogue's Chest
+	
+label (for="magical")Magical(glowing purple)?
+ select (name="magical" id="magical")
+    option(value="No")No
+    option(value="Yes")Yes
+
+label (for="Location")Location?(optional)
+ select (name="location" id="loc")
+    option(value="Act 5")Act 5
+    option(value="Act 4")Act 4
+	option(value="Act 3")Act 3
+	option(value="Act 2")Act 2
+	option(value="Act 1")Act 1
+	
+  label (for="ItemsChest")Items
+  select (name="ItemsChest" id="It_C")
+    option(value="Harlequin''s Crest")Harlequin's Crest
+    option(value="Dracul''s Grasp")Dracul's Grasp
+    option(value="Arachnid Mesh")Arachnid Mesh
+    option(value="Blade of Ali Baba")Blade of Ali Baba
+    option(value="The Stone of Jordan")The Stone of Jordan
+	option(value="Skulder''s Ire")Skulder's Ire
+	option(value="Arianoc''s Needle")Arianoc's Needle
+	option(value="Tal Rasha''s Lidless Eye")Tal Rasha's Lidless Eye
+	option(value="Cloudkill")Cloudkill
+	option(value="Chance Gaurd")Chance Gaurd
+	option(value="Festering Essence of Destruction")Festering Essence of Destruction
+	option(value="Burning Essence of Terror")Burning Essence of Terror
+	option(value="Charged Essence of Hatred")Charged Essence of Hatred
+	option(value="Twisted Essence of Suffering")Twisted Essence of Suffering
+	option(value="Zod")Zod
+	option(value="Amn")Amn
+	option(value="Ral")Ral
+	option(value="Ist")Ist
+	option(value="Mal")Mal
+	option(value="Fal")Fal
+	option(value="Pul")Pul
+	option(value="Magic Items")Magic Items
+	option(value="gold")gold
+	option(value="Base Items")Base Items
+  </br></br>
+  input (type="submit" value="Search Chests" onclick="ChestS()")
+

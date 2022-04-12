@@ -1,0 +1,18 @@
+h1 RESULTS
+a(href='/') back
+p Results
+table(style='width:10%', border='1')
+   p monster search
+tr(style="width:50%")
+   each item in rows
+     th #{item}  |
+</br>
+   each val in test
+     tr
+       th #{val.name}   |
+        td #{val.rarity}  |
+        td #{val.cName}  |
+        td #{val.Location}  |
+        td #{val.difficulty}  |
+        td #{val.DropChance}  |
+           <br>

@@ -1,0 +1,124 @@
+INSERT or ignore into Monster_Drop (Name,Difficulty,Lootid)  VALUES ("Baal", "Hell","Harlequin's Crest");
+INSERT or ignore into Monster_Drop (Name,Difficulty,Lootid)  VALUES ("Baal", "Hell","Dracul's gloves");
+INSERT or ignore into Monster_Drop (Name,Difficulty,Lootid)  VALUES ("Baal", "Hell","Zod");
+INSERT or ignore into Monster_Drop (Name,Difficulty,Lootid)  VALUES ("Baal", "Hell","Amn");
+INSERT or ignore into Monster_Drop (Name,Difficulty,Lootid)  VALUES ("Baal", "Hell","Ral");
+INSERT or ignore into Monster_Drop (Name,Difficulty,Lootid)  VALUES ("Baal", "Hell","Festering Essence of Destruction");
+INSERT or ignore into Monster_Drop (Name,Difficulty,Lootid)  VALUES ("Baal", "Hell","Magic Items");
+INSERT or ignore into Monster_Drop (Name,Difficulty,Lootid)  VALUES ("Baal", "Hell","gold");
+INSERT or ignore into Monster_Drop (Name,Difficulty,Lootid)  VALUES ("Baal", "Hell","Base Items");
+
+INSERT or ignore into Monster_Drop (Name,Difficulty,Lootid)  VALUES ("Diablo", "Hell","Blade of Ali Baba");
+INSERT or ignore into Monster_Drop (Name,Difficulty,Lootid)  VALUES ("Diablo", "Hell","The Stone of Jordan");
+INSERT or ignore into Monster_Drop (Name,Difficulty,Lootid)  VALUES ("Diablo", "Hell","Ist");
+INSERT or ignore into Monster_Drop (Name,Difficulty,Lootid)  VALUES ("Diablo", "Hell","Mal");
+INSERT or ignore into Monster_Drop (Name,Difficulty,Lootid)  VALUES ("Diablo", "Hell","Fal");
+INSERT or ignore into Monster_Drop (Name,Difficulty,Lootid)  VALUES ("Diablo", "Hell","Burning Essence of Terror");
+INSERT or ignore into Monster_Drop (Name,Difficulty,Lootid)  VALUES ("Diablo", "Hell","Magic Items");
+INSERT or ignore into Monster_Drop (Name,Difficulty,Lootid)  VALUES ("Diablo", "Hell","gold");
+INSERT or ignore into Monster_Drop (Name,Difficulty,Lootid)  VALUES ("Diablo", "Hell","Base Items");
+
+INSERT or ignore into Monster_Drop (Name,Difficulty,Lootid)  VALUES ("Mephisto", "Hell","Skulder's Ire");
+INSERT or ignore into Monster_Drop (Name,Difficulty,Lootid)  VALUES ("Mephisto", "Hell","Arachnid Mesh");
+INSERT or ignore into Monster_Drop (Name,Difficulty,Lootid)  VALUES ("Mephisto", "Hell","Mal");
+INSERT or ignore into Monster_Drop (Name,Difficulty,Lootid)  VALUES ("Mephisto", "Hell","Pul");
+INSERT or ignore into Monster_Drop (Name,Difficulty,Lootid)  VALUES ("Mephisto", "Hell","Amn");
+INSERT or ignore into Monster_Drop (Name,Difficulty,Lootid)  VALUES ("Mephisto", "Hell","Charged Essence of Hatred");
+INSERT or ignore into Monster_Drop (Name,Difficulty,Lootid)  VALUES ("Mephisto", "Hell","Magic Items");
+INSERT or ignore into Monster_Drop (Name,Difficulty,Lootid)  VALUES ("Mephisto", "Hell","gold");
+INSERT or ignore into Monster_Drop (Name,Difficulty,Lootid)  VALUES ("Mephisto", "Hell","Base Items");
+
+INSERT or ignore into Monster_Drop (Name,Difficulty,Lootid)  VALUES ("Duriel", "Hell","Skulder's Ire");
+INSERT or ignore into Monster_Drop (Name,Difficulty,Lootid)  VALUES ("Duriel", "Hell","Dracul's gloves");
+INSERT or ignore into Monster_Drop (Name,Difficulty,Lootid)  VALUES ("Duriel", "Hell","Pul");
+INSERT or ignore into Monster_Drop (Name,Difficulty,Lootid)  VALUES ("Duriel", "Hell","Fal");
+INSERT or ignore into Monster_Drop (Name,Difficulty,Lootid)  VALUES ("Duriel", "Hell","Ral");
+INSERT or ignore into Monster_Drop (Name,Difficulty,Lootid)  VALUES ("Duriel", "Hell","Twisted Essence of Suffering");
+INSERT or ignore into Monster_Drop (Name,Difficulty,Lootid)  VALUES ("Duriel", "Hell","Magic Items");
+INSERT or ignore into Monster_Drop (Name,Difficulty,Lootid)  VALUES ("Duriel", "Hell","gold");
+INSERT or ignore into Monster_Drop (Name,Difficulty,Lootid)  VALUES ("Duriel", "Hell","Base Items");
+
+INSERT or ignore into Monster_Drop (Name,Difficulty,Lootid)  VALUES ("Andarial", "Hell","The Stone of Jordan");
+INSERT or ignore into Monster_Drop (Name,Difficulty,Lootid)  VALUES ("Andarial", "Hell","Harlequin's Crest");
+INSERT or ignore into Monster_Drop (Name,Difficulty,Lootid)  VALUES ("Andarial", "Hell","Mal");
+INSERT or ignore into Monster_Drop (Name,Difficulty,Lootid)  VALUES ("Andarial", "Hell","Amn");
+INSERT or ignore into Monster_Drop (Name,Difficulty,Lootid)  VALUES ("Andarial", "Hell","Ral");
+INSERT or ignore into Monster_Drop (Name,Difficulty,Lootid)  VALUES ("Andarial", "Hell","Charged Essence of Hatred");
+INSERT or ignore into Monster_Drop (Name,Difficulty,Lootid)  VALUES ("Andarial", "Hell","Magic Items");
+INSERT or ignore into Monster_Drop (Name,Difficulty,Lootid)  VALUES ("Andarial", "Hell","gold");
+INSERT or ignore into Monster_Drop (Name,Difficulty,Lootid)  VALUES ("Andarial", "Hell","Base Items");
+
+------
+INSERT or ignore into Monster_Drop (Name,Difficulty,Lootid)  VALUES ("Baal", "Nightmare","Arianoc's Needle");
+INSERT or ignore into Monster_Drop (Name,Difficulty,Lootid)  VALUES ("Baal", "Nightmare","Skulder's Ire");
+INSERT or ignore into Monster_Drop (Name,Difficulty,Lootid)  VALUES ("Baal", "Nightmare","Amn");
+INSERT or ignore into Monster_Drop (Name,Difficulty,Lootid)  VALUES ("Baal", "Nightmare","Ral");
+INSERT or ignore into Monster_Drop (Name,Difficulty,Lootid)  VALUES ("Baal", "Nightmare","Magic Items");
+INSERT or ignore into Monster_Drop (Name,Difficulty,Lootid)  VALUES ("Baal", "Nightmare","gold");
+INSERT or ignore into Monster_Drop (Name,Difficulty,Lootid)  VALUES ("Baal", "Nightmare","Base Items");
+
+INSERT or ignore into Monster_Drop (Name,Difficulty,Lootid)  VALUES ("Diablo", "Nightmare","Chance Gaurd");
+INSERT or ignore into Monster_Drop (Name,Difficulty,Lootid)  VALUES ("Diablo", "Nightmare","The Stone of Jordan");
+INSERT or ignore into Monster_Drop (Name,Difficulty,Lootid)  VALUES ("Diablo", "Nightmare","Mal");
+INSERT or ignore into Monster_Drop (Name,Difficulty,Lootid)  VALUES ("Diablo", "Nightmare","Fal");
+INSERT or ignore into Monster_Drop (Name,Difficulty,Lootid)  VALUES ("Diablo", "Nightmare","Magic Items");
+INSERT or ignore into Monster_Drop (Name,Difficulty,Lootid)  VALUES ("Diablo", "Nightmare","gold");
+INSERT or ignore into Monster_Drop (Name,Difficulty,Lootid)  VALUES ("Diablo", "Nightmare","Base Items");
+
+INSERT or ignore into Monster_Drop (Name,Difficulty,Lootid)  VALUES ("Mephisto", "Nightmare","Skulder's Ire");
+INSERT or ignore into Monster_Drop (Name,Difficulty,Lootid)  VALUES ("Mephisto", "Nightmare","Cloudkill");
+INSERT or ignore into Monster_Drop (Name,Difficulty,Lootid)  VALUES ("Mephisto", "Nightmare","Pul");
+INSERT or ignore into Monster_Drop (Name,Difficulty,Lootid)  VALUES ("Mephisto", "Nightmare","Amn");
+INSERT or ignore into Monster_Drop (Name,Difficulty,Lootid)  VALUES ("Mephisto", "Nightmare","Magic Items");
+INSERT or ignore into Monster_Drop (Name,Difficulty,Lootid)  VALUES ("Mephisto", "Nightmare","gold");
+INSERT or ignore into Monster_Drop (Name,Difficulty,Lootid)  VALUES ("Mephisto", "Nightmare","Base Items");
+
+INSERT or ignore into Monster_Drop (Name,Difficulty,Lootid)  VALUES ("Duriel", "Nightmare","Skulder's Ire");
+INSERT or ignore into Monster_Drop (Name,Difficulty,Lootid)  VALUES ("Duriel", "Nightmare","The Stone of Jordan");
+INSERT or ignore into Monster_Drop (Name,Difficulty,Lootid)  VALUES ("Duriel", "Nightmare","Fal");
+INSERT or ignore into Monster_Drop (Name,Difficulty,Lootid)  VALUES ("Duriel", "Nightmare","Ral");
+INSERT or ignore into Monster_Drop (Name,Difficulty,Lootid)  VALUES ("Duriel", "Nightmare","Magic Items");
+INSERT or ignore into Monster_Drop (Name,Difficulty,Lootid)  VALUES ("Duriel", "Nightmare","gold");
+INSERT or ignore into Monster_Drop (Name,Difficulty,Lootid)  VALUES ("Duriel", "Nightmare","Base Items");
+
+INSERT or ignore into Monster_Drop (Name,Difficulty,Lootid)  VALUES ("Andarial", "Nightmare","The Stone of Jordan");
+INSERT or ignore into Monster_Drop (Name,Difficulty,Lootid)  VALUES ("Andarial", "Nightmare","Tal Rasha's Lidless Eye");
+INSERT or ignore into Monster_Drop (Name,Difficulty,Lootid)  VALUES ("Andarial", "Nightmare","Amn");
+INSERT or ignore into Monster_Drop (Name,Difficulty,Lootid)  VALUES ("Andarial", "Nightmare","Ral");
+INSERT or ignore into Monster_Drop (Name,Difficulty,Lootid)  VALUES ("Andarial", "Nightmare","Magic Items");
+INSERT or ignore into Monster_Drop (Name,Difficulty,Lootid)  VALUES ("Andarial", "Nightmare","gold");
+INSERT or ignore into Monster_Drop (Name,Difficulty,Lootid)  VALUES ("Andarial", "Nightmare","Base Items");
+
+--------
+INSERT or ignore into Monster_Drop (Name,Difficulty,Lootid)  VALUES ("Baal", "Normal","Skulder's Ire");
+INSERT or ignore into Monster_Drop (Name,Difficulty,Lootid)  VALUES ("Baal", "Normal","Ral");
+INSERT or ignore into Monster_Drop (Name,Difficulty,Lootid)  VALUES ("Baal", "Normal","Magic Items");
+INSERT or ignore into Monster_Drop (Name,Difficulty,Lootid)  VALUES ("Baal", "Normal","gold");
+INSERT or ignore into Monster_Drop (Name,Difficulty,Lootid)  VALUES ("Baal", "Normal","Base Items");
+
+INSERT or ignore into Monster_Drop (Name,Difficulty,Lootid)  VALUES ("Diablo", "Normal","Chance Gaurd");
+INSERT or ignore into Monster_Drop (Name,Difficulty,Lootid)  VALUES ("Diablo", "Normal","Fal");
+INSERT or ignore into Monster_Drop (Name,Difficulty,Lootid)  VALUES ("Diablo", "Normal","Magic Items");
+INSERT or ignore into Monster_Drop (Name,Difficulty,Lootid)  VALUES ("Diablo", "Normal","gold");
+INSERT or ignore into Monster_Drop (Name,Difficulty,Lootid)  VALUES ("Diablo", "Normal","Base Items");
+
+INSERT or ignore into Monster_Drop (Name,Difficulty,Lootid)  VALUES ("Mephisto", "Normal","Cloudkill");
+INSERT or ignore into Monster_Drop (Name,Difficulty,Lootid)  VALUES ("Mephisto", "Normal","Amn");
+INSERT or ignore into Monster_Drop (Name,Difficulty,Lootid)  VALUES ("Mephisto", "Normal","Magic Items");
+INSERT or ignore into Monster_Drop (Name,Difficulty,Lootid)  VALUES ("Mephisto", "Normal","gold");
+INSERT or ignore into Monster_Drop (Name,Difficulty,Lootid)  VALUES ("Mephisto", "Normal","Base Items");
+
+INSERT or ignore into Monster_Drop (Name,Difficulty,Lootid)  VALUES ("Duriel", "Normal","Skulder's Ire");
+INSERT or ignore into Monster_Drop (Name,Difficulty,Lootid)  VALUES ("Duriel", "Normal","Ral");
+INSERT or ignore into Monster_Drop (Name,Difficulty,Lootid)  VALUES ("Duriel", "Normal","Magic Items");
+INSERT or ignore into Monster_Drop (Name,Difficulty,Lootid)  VALUES ("Duriel", "Normal","gold");
+INSERT or ignore into Monster_Drop (Name,Difficulty,Lootid)  VALUES ("Duriel", "Normal","Base Items");
+
+INSERT or ignore into Monster_Drop (Name,Difficulty,Lootid)  VALUES ("Andarial", "Normal","Tal Rasha's Lidless Eye");
+INSERT or ignore into Monster_Drop (Name,Difficulty,Lootid)  VALUES ("Andarial", "Normal","Amn");
+INSERT or ignore into Monster_Drop (Name,Difficulty,Lootid)  VALUES ("Andarial", "Normal","Ral");
+INSERT or ignore into Monster_Drop (Name,Difficulty,Lootid)  VALUES ("Andarial", "Normal","Magic Items");
+INSERT or ignore into Monster_Drop (Name,Difficulty,Lootid)  VALUES ("Andarial", "Normal","gold");
+INSERT or ignore into Monster_Drop (Name,Difficulty,Lootid)  VALUES ("Andarial", "Normal","Base Items");
+
+--items={{zod,Ist,Mal,Pul,Fal,Amn,Ral},{Harlequin Crest,Dracul's Gloves,Skulder's Ire, Arachnid mesh, Arioc's Needle,Chance Gaurd,The Stone of Jordan,Blade of Ali baba,Cloudkill,Tal Rasha's Lidless Eye},{gold,key,Magic items,Base --items},{Festering Essence of Destruction,Charged Essence of Hatred,Burning Essence of Terror,Twisted Essence of Suffering}}

@@ -1,0 +1,18 @@
+h1 RESULTS
+a(href='/') back
+p Results
+
+   p Chest search
+table(style='width:500%', border='1')
+tr(style="width:200%")
+   each item in rows
+     th #{item} |
+</br>
+   each val in test
+     tr
+            td #{val.cName}  |
+            td #{val.Location} |
+            td #{val.difficulty} |
+            td #{val.DropChance} |
+            td #{val.Iname}
+            <br>

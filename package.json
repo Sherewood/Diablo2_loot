@@ -1,0 +1,19 @@
+{
+  "name": "node-template",
+  "version": "0.1.0",
+  "description": "A starter template",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "start": "node server/main.js"
+  },
+  "dependencies": {
+    "await": "^0.2.6",
+    "better-sqlite3": "^7.5.1",
+    "body-parser": "^1.20.0",
+    "connect-sqlite3": "^0.9.13",
+    "express": "^4.17.3",
+    "path": "^0.12.7",
+    "pug": "^3.0.2"
+  }
+}

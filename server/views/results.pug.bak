@@ -1,0 +1,12 @@
+h1 RESULTS
+a(href='/') back
+p Results
+table(style='width:10%')
+   p monster search
+
+   each val in test
+     tr
+       td #{val.Name} |
+       td #{val.Difficulty} |
+       td #{val.Iname}
+           <br>

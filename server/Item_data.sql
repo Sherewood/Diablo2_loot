@@ -1,0 +1,29 @@
+--Items
+INSERT OR IGNORE INTO Item_Drops_M (name,rarity,Itype,chance) Values("Harlequin''s Crest","Unique","Shako",0.0002);
+INSERT OR IGNORE INTO Item_Drops_M (name,rarity,Itype,chance) Values("Dracul''s Grasp","Unique","VampireHide Gloves",0.001);
+INSERT OR IGNORE INTO Item_Drops_M (name,rarity,Itype,chance) Values("Arachnid Mesh","Unique","Spiderweb Sash",0.002);
+INSERT OR IGNORE INTO Item_Drops_M (name,rarity,Itype,chance) Values("Blade of Ali Baba","Unique","Tulwar",0.003);
+INSERT OR IGNORE INTO Item_Drops_M (name,rarity,Itype,chance) Values("The Stone of Jordan","Unique","Ring",0.025);
+INSERT OR IGNORE INTO Item_Drops_M (name,rarity,Itype,chance) Values("Skulder''s Ire","Unique","Mesh Armor",0.035);
+INSERT OR IGNORE INTO Item_Drops_M (name,rarity,Itype,chance) Values("Arianoc''s Needle","Unique","Spear",0.04);
+INSERT OR IGNORE INTO Item_Drops_M (name,rarity,Itype,chance) Values("Tal Rasha''s Lidless Eye","Set Item","Swirling Crystal",0.055);
+INSERT OR IGNORE INTO Item_Drops_M (name,rarity,Itype,chance) Values("Cloudkill","Unique","Ax",0.064);
+INSERT OR IGNORE INTO Item_Drops_M (name,rarity,Itype,chance) Values("Chance Gaurd","Unique","Leather gloves",0.054);
+--Essences 
+INSERT OR IGNORE INTO Item_Drops_M (name,rarity,Itype,chance) Values("Festering Essence of Destruction","Rare","Misc",0.05);
+INSERT OR IGNORE INTO Item_Drops_M (name,rarity,Itype,chance) Values("Burning Essence of Terror","Rare","Misc",0.05);
+INSERT OR IGNORE INTO Item_Drops_M (name,rarity,Itype,chance) Values("Charged Essence of Hatred","Rare","Misc",0.05);
+INSERT OR IGNORE INTO Item_Drops_M (name,rarity,Itype,chance) Values("Twisted Essence of Suffering","Rare","Misc",0.05);
+--Runes
+INSERT OR IGNORE INTO Item_Drops_M (name,rarity,Itype,chance) Values("Zod","Rare","Rune",0.001);
+INSERT OR IGNORE INTO Item_Drops_M (name,rarity,Itype,chance) Values("Amn","Rare","Rune",0.1);
+INSERT OR IGNORE INTO Item_Drops_M (name,rarity,Itype,chance) Values("Ral","Rare","Rune",0.3);
+INSERT OR IGNORE INTO Item_Drops_M (name,rarity,Itype,chance) Values("Ist","Rare","Rune",0.02);
+INSERT OR IGNORE INTO Item_Drops_M (name,rarity,Itype,chance) Values("Mal","Rare","Rune",0.03);
+INSERT OR IGNORE INTO Item_Drops_M (name,rarity,Itype,chance) Values("Fal","Rare","Rune",0.05);
+INSERT OR IGNORE INTO Item_Drops_M (name,rarity,Itype,chance) Values("Pul","Rare","Rune",0.005);
+--Misc
+INSERT OR IGNORE INTO Item_Drops_M (name,rarity,Itype,chance) Values("Magic Items","Magic","misc",0.5);
+INSERT OR IGNORE INTO Item_Drops_M (name,rarity,Itype,chance) Values("gold","gold","misc",1.0);
+INSERT OR IGNORE INTO Item_Drops_M (name,rarity,Itype,chance) Values("Base Items","Normal","misc",0.8);
+

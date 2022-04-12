@@ -1,0 +1,260 @@
+import express from 'express'
+import { fileURLToPath } from 'node:url'
+import Database from 'better-sqlite3'
+import path from 'path'
+import pug from 'pug'
+import http from 'http'
+import { dirname } from 'path';
+import bodyParser from 'body-parser'
+
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
+const app = express()
+app.use(bodyParser.urlencoded({extended:true}))
+//Configure and resolve the form request body. The type is: application / APP
+app.use(express.json())
+
+//Parse the form request body. The type is: application / x-www-form-urlencoded
+app.use(express.urlencoded())
+app.set("view engine", "pug");
+const db = new Database('./DiabloTwo.db',{}, (err) =>{
+	if (err) return console.error(err.message);
+	console.log("connection succesful");
+});
+const getData = (sql)=>{
+    return new Promise((resolve, reject)=>{
+    db.serialize(()=>{
+        db.all(sql,[], (err, rows)=>{
+            if (err)
+                reject(err)
+            resolve(rows)
+        })
+    });
+    })
+}
+var table=[]
+var data=[]
+app.get('/',basic)
+app.post("/MonsterS",Monster_Search)
+app.post("/ItemS",Item_Search)
+app.post("/ChestS",Chest_Search)
+app.get("/indexhandle.js", getScript)
+app.get("/results",loadResults)
+app.post("/results",loadResults)
+function loadResults(req, res ,next)
+{
+	//console.log(req.name)
+	//let sql="SELECT * FROM MONSTER_DROP"
+	
+	//var grizzo=rez.all()
+	console.log(data[0])
+	if (data[0]=='010')
+	{
+	res.format({
+		"text/html":()=> {res.render("results", {rows:table,test:data})},
+		"application/json": ()=> {res.status(200).json(rows,test)({rows:table,test:data}) }
+	})
+	}
+	else if (data[0] =='020')
+	{
+		res.format({
+		"text/html":()=> {res.render("items_chest", {rows:table,test:data})},
+		"application/json": ()=> {res.status(200).json(rows,test)({rows:table,test:data}) }
+	})
+	}
+	else if (data[0] =='021')
+	{
+		res.format({
+		"text/html":()=> {res.render("items_monster", {rows:table,test:data})},
+		"application/json": ()=> {res.status(200).json(rows,test)({rows:table,test:data}) }
+	})
+	}
+	else if (data[0] =='031')
+	{
+		console.log(data)
+		res.format({
+		"text/html":()=> {res.render("chest", {rows:table,test:data})},
+		"application/json": ()=> {res.status(200).json(rows,test)({rows:table,test:data}) }
+	})
+	}
+}
+function getScript(req, res, next){
+	res.sendFile(path.join(__dirname+'/indexhandle.js'))
+}
+function basic( req, res ,next)
+{
+	//console.log("AS")
+		res.format({
+		"text/html":()=> {res.render("index"),{title:'Mon rows:',rows:table}},
+	});
+}
+function query (X,res)
+{
+	//console.log("help!")
+	table=JSON.parse(JSON.stringify(X))
+	//console.log(table)
+	return table
+
+	
+}
+function Monster_Search(req, res, next){
+	console.log("AAAAAAAAAAAAAAAHHHHHHHHHHHHHHHHHHH")
+	let name=req.body.name;
+	let dif=req.body.dif;
+	data=[]
+	//console.log(req.body.dif)
+	//let sql="SELECT Name FROM MONSTER_DROP WHERE (Name='"+name+"')";
+	let sql="SELECT Monster_Drop.Name,Monster_Drop.Difficulty,Item_Drops_M.name FROM Monster_Drop join Item_Drops_M where (Monster_Drop.Lootid=Item_Drops_M.Itemid and Monster_Drop.Difficulty='"+dif+"'and Monster_Drop.Name='"+name+"' )";
+	const rez=db.prepare(sql);
+	table=rez.columns().map(column => column.name)
+	//table=getData(sql).then(results=>query(results,res)) // => { slug: 'adding-matomo-website', read_times: 1, shares: 0, likes: 0 }})
+	//console.log(JSON.parse(JSON.stringify(table)))
+	//console.log(table)]
+	for (const het of rez.iterate()){
+		let test=[]
+		test.Monid=het.MonId;
+		test.Difficulty=het.Difficulty;
+		test.Name=het.Name;
+		test.Iname=het.name;
+		data.push("010")
+		data.push(test)
+	}
+	console.log(data)
+	console.log("finisih")
+}
+function Item_Search(req, res, next){
+	let name=req.body.name;
+	let which=req.body.which
+	data=[]
+	if (which=="Chests")
+	{
+		
+		let sql="Select Item_Drops_M.name,Item_Drops_M.rarity,Item_Drops_M.Itype,Chest_Drops.cName,Chest_Drops.Location,Chest_Drops.difficulty,Chest_Drops.DropChance  from Item_Drops_Chest join Item_Drops_M on (Item_Drops_M.Itemid=Item_Drops_Chest.ItemId) join Chest_Drops on (Chest_Drops.Chestid=Item_Drops_Chest.Chestid) where (Item_Drops_M.name='"+name+"')";
+		const rez=db.prepare(sql);
+		var grizzo=rez.all()
+		table=rez.columns().map(column => column.name)
+		for (const het of rez.iterate()){
+		let test=[]
+		test.name=het.name;
+		test.rarity=het.rarity;
+		test.Itype=het.Itype;
+		test.cName=het.cName;
+		test.Location=het.Location;
+		test.difficulty=het.difficulty;
+		test.DropChance=het.DropChance
+		data.push("020")
+		data.push(test)
+	}
+	}
+	else
+	{
+		let sql="select Item_Drops_M.name,Item_Drops_M.rarity,Item_Drops_M.Itype,Monster_Drop.Name,Monster_Drop.Difficulty from Item_Drops_M join Monster_Drop where (Item_Drops_M.Itemid=Monster_Drop.Lootid and Item_Drops_M.name='"+name+"')";
+		const rez=db.prepare(sql);
+		var grizzo=rez.all()
+		table=rez.columns().map(column => column.name)
+		for (const het of rez.iterate()){
+		let test=[]
+			test.Iname=het.name;
+			test.rarity=het.rarity;
+			test.Itype=het.Itype;
+			test.Name=het.Name;
+			test.Difficulty=het.Difficulty;
+			data.push("021")
+			data.push(test)
+		}
+	}
+	console.log("echek")
+}
+function Chest_Search(req, res, next){
+	let name=req.body.name;
+	let mag=req.body.mag;
+	let item=req.body.item;
+	let loc=req.body.loc;
+	let Dif=req.body.Dif
+	data=[]
+	if(mag=="No"){
+		if(item=="Any"){
+			
+		let sql="Select Chest_Drops.cName,Chest_Drops.difficulty,Chest_Drops.Location,Chest_Drops.DropChance,Item_Drops_M.name from Item_Drops_Chest join Chest_Drops on (Item_Drops_Chest.ChestId=Chest_Drops.Chestid) join Item_Drops_M on (Item_Drops_Chest.Itemid=Item_Drops_Chest.ItemId) where (Chest_Drops.magical=False and Chest_Drops.difficulty='"+Dif+"' and Chest_Drops.Location='"+loc+"')";
+		const rez=db.prepare(sql);
+		var grizzo=rez.all()
+		table=rez.columns().map(column => column.name)
+		for (const het of rez.iterate()){
+		let test=[]
+			test.cName=het.cName;
+			test.Location=het.Location;
+			test.difficulty=het.difficulty;
+			test.DropChance=het.DropChance
+			test.Iname=het.name
+			data.push("031")
+			data.push(test)
+		}
+
+
+		}
+		else
+		{
+			let sql="Select Chest_Drops.cName,Chest_Drops.difficulty,Chest_Drops.Location,Chest_Drops.DropChance,Item_Drops_M.name from Item_Drops_Chest join Chest_Drops on (Item_Drops_Chest.ChestId=Chest_Drops.Chestid) join Item_Drops_M on (Item_Drops_Chest.Itemid=Item_Drops_Chest.ItemId) where (Chest_Drops.magical=False and Chest_Drops.difficulty='"+Dif+"'and Item_Drops_M.name='"+item+"' and Chest_Drops.Location='"+loc+"')";
+			const rez=db.prepare(sql);
+			var grizzo=rez.all()
+			table=rez.columns().map(column => column.name)
+			for (const het of rez.iterate()){
+			let test=[]
+				test.cName=het.cName;
+				test.Location=het.Location;
+				test.difficulty=het.difficulty;
+				test.DropChance=het.DropChance
+				test.Iname=het.name
+				data.push("031")
+				data.push(test)
+			}
+
+
+		}
+
+	//console.log("this is the second"+table)
+	
+				
+	}
+	else{
+		if(item=="Any"){
+		let sql="Select Chest_Drops.cName,Chest_Drops.difficulty,Chest_Drops.Location,Chest_Drops.DropChance,Item_Drops_M.name from Item_Drops_Chest join Chest_Drops on (Item_Drops_Chest.ChestId=Chest_Drops.Chestid) join Item_Drops_M on (Item_Drops_Chest.Itemid=Item_Drops_Chest.ItemId) where (Chest_Drops.magical=True and Chest_Drops.difficulty='"+Dif+"'and Chest_Drops.Location='"+loc+"')";	
+		const rez=db.prepare(sql);
+		var grizzo=rez.all()
+		table=rez.columns().map(column => column.name)
+		for (const het of rez.iterate()){
+		let test=[]
+			test.cName=het.cName;
+			test.Location=het.Location;
+			test.difficulty=het.difficulty;
+			test.DropChance=het.DropChance
+			test.Iname=het.name
+			data.push("031")
+			data.push(test)
+		}
+
+
+		}
+		else
+		{
+		let sql="Select Chest_Drops.cName,Chest_Drops.difficulty,Chest_Drops.Location,Chest_Drops.DropChance,Item_Drops_M.name from Item_Drops_Chest join Chest_Drops on (Item_Drops_Chest.ChestId=Chest_Drops.Chestid) join Item_Drops_M on (Item_Drops_Chest.Itemid=Item_Drops_Chest.ItemId) where (Chest_Drops.magical=True and Chest_Drops.difficulty='"+Dif+"' and Item_Drops_M.name='"+item+"' and Chest_Drops.Location='"+loc+"')";
+		const rez=db.prepare(sql);
+		var grizzo=rez.all()
+		table=rez.columns().map(column => column.name)
+		for (const het of rez.iterate()){
+		let test=[]
+			test.cName=het.cName;
+			test.Location=het.Location;
+			test.difficulty=het.difficulty;
+			test.DropChance=het.DropChance
+			test.Iname=het.name
+			data.push("031")
+			data.push(test)
+		}
+
+
+		}
+	}
+}
+app.listen(3001);
+console.log('Server running at http://127.0.0.1:3001/');

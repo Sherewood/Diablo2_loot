@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.dropbtn {
+  background-color: #3498DB;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #2980B9;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
+</style>
+</head>
+<body>
+
+<h2>Welcome to Diablo 2 Drop generator!</h2>
+<p>Click on the button to open the dropdown menu.</p>
+  <label for="Monsters">Monsters</label>
+  <select name="Monsters" id="Mon">
+    <option value="Baal">Baal</option>
+    <option value="Diablo">Diablo</option>
+    <option value="Mephisto">Mephisto</option>
+    <option value="Duriel">Duriel</option>
+    <option value="Andarial">Andarial</option>
+</select>
+<label for="DifficultyA">Difficulty</label>
+ <select name="Difficulty" id="DifA">
+    <option value="Normal">Normal</option>
+    <option value="Nightmare">Nightmare</option>
+    <option value="Hell">Hell</option>
+</select>
+  <br><br>
+  <input type="submit" value="Find Monster Drops" onclick="MonsterS()">
+
+<br><br><br><br><br><br><br><br><br>
+  <label for="Items">Items</label>
+  <select name="Items" id="It">
+    <option value="Harlequin''s Crest">Harlequin's Crest</option>
+    <option value="Dracul''s Grasp">Dracul's Grasp</option>
+    <option value="Arachnid Mesh">Arachnid Mesh</option>
+    <option value="Blade of Ali Baba">Blade of Ali Baba</option>
+    <option value="The Stone of Jordan">The Stone of Jordan</option>
+	<option value="Skulder''s Ire">Skulder's Ire</option>
+	<option value="Arianoc''s Needle">Arianoc's Needle</option>
+	<option value="Tal Rasha''s Lidless Eye">Tal Rasha's Lidless Eye</option>
+	<option value="Cloudkill">Cloudkill</option>
+	<option value="Chance Gaurd">Chance Gaurd</option>
+	<option value="Festering Essence of Destruction">Festering Essence of Destruction</option>
+	<option value="Burning Essence of Terror">Burning Essence of Terror</option>
+	<option value="Charged Essence of Hatred">Charged Essence of Hatred</option>
+	<option value="Twisted Essence of Suffering">Twisted Essence of Suffering</option>
+	<option value="Zod">Zod</option>
+	<option value="Amn">Amn</option>
+	<option value="Ral">Ral</option>
+	<option value="Ist">Ist</option>
+	<option value="Mal">Mal</option>
+	<option value="Fal">Fal</option>
+	<option value="Pul">Pul</option>
+	<option value="Magic Items">Magic Items</option>
+	<option value="gold">gold</option>
+	<option value="Base Items">Base Items</option>
+</select>
+<label for="C_o_M">Chest or Monsters?</label>
+ <select name="Chest or monsters" id="C_o_M">
+    <option value="Chests">Chests</option>
+    <option value="Monsters">Monsters</option>
+</select>
+  <br><br>
+  <input type="submit" value="Look for loot droppers" onclick="ItemS()">
+
+<br><br><br><br><br><br><br><br><br>
+<label for="Chest">Chest</label>
+ <select name="Chest" id="Chest">
+    <option value="Barbarian Chest">Barbarian Chest</option>
+    <option value="Obsidian Chest">Obsidian Chest</option>
+	<option value="Kurast Chest">Kurast Chest</option>
+	<option value="Desert Chest">Desert Chest</option>
+	<option value="Rogue''s Chest">Rogue's Chest</option>
+</select>
+<label for="magical">Magical(glowing purple)?</label>
+ <select name="magical" id="magical">
+    <option value="No">No</option>
+    <option value="Yes">Yes</option>
+</select>
+<label for="Location">Location?(optional)</label>
+ <select name="location" id="loc">
+    <option value="Act 5">Act 5</option>
+    <option value="Act 4">Act 4</option>
+	<option value="Act 3">Act 3</option>
+	<option value="Act 2">Act 2</option>
+	<option value="Act 1">Act 1</option>
+</select>
+  <label for="ItemsChest">Items</label>
+  <select name="ItemsChest" id="It_C">
+    <option value="Harlequin''s Crest">Harlequin's Crest</option>
+    <option value="Dracul''s Grasp">Dracul's Grasp</option>
+    <option value="Arachnid Mesh">Arachnid Mesh</option>
+    <option value="Blade of Ali Baba">Blade of Ali Baba</option>
+    <option value="The Stone of Jordan">The Stone of Jordan</option>
+	<option value="Skulder''s Ire">Skulder's Ire</option>
+	<option value="Arianoc''s Needle">Arianoc's Needle</option>
+	<option value="Tal Rasha''s Lidless Eye">Tal Rasha's Lidless Eye</option>
+	<option value="Cloudkill">Cloudkill</option>
+	<option value="Chance Gaurd">Chance Gaurd</option>
+	<option value="Festering Essence of Destruction">Festering Essence of Destruction</option>
+	<option value="Burning Essence of Terror">Burning Essence of Terror</option>
+	<option value="Charged Essence of Hatred">Charged Essence of Hatred</option>
+	<option value="Twisted Essence of Suffering">Twisted Essence of Suffering</option>
+	<option value="Zod">Zod</option>
+	<option value="Amn">Amn</option>
+	<option value="Ral">Ral</option>
+	<option value="Ist">Ist</option>
+	<option value="Mal">Mal</option>
+	<option value="Fal">Fal</option>
+	<option value="Pul">Pul</option>
+	<option value="Magic Items">Magic Items</option>
+	<option value="gold">gold</option>
+	<option value="Base Items">Base Items</option>
+</select>
+  <br><br>
+  <input type="submit" value="Search Chests" onclick="ChestS()">
+  <script>	
+    function MonsterS(){
+    let name=document.getElementById("Mon").value;
+	let Dif= document.getElementById("DifA").value;
+	console.log(name);
+	console.log(Dif);
+	var xhttp= new XMLHttpRequest()
+	xhttp.open("POST", "/MonsterS", true)
+	xhttp.setRequestHeader("Content-Type", "application/json")
+	xhttp.send(JSON.stringify({name:name, dif:Dif}))
+	}
+	function ItemS(){
+    let name=document.getElementById("It").value;
+	let which= document.getElementById("C_o_M").value;
+	console.log(name);
+	var xhttp= new XMLHttpRequest()
+	xhttp.open("POST", "/ItemS", true)
+	xhttp.setRequestHeader("Content-Type", "application/json")
+	xhttp.send(JSON.stringify({name:name, which:which}))
+	}
+	function ChestS(){
+    let name=document.getElementById("Chest").value;
+	let mag= document.getElementById("magical").value;
+	let loc=document.getElementById("loc").value;
+	let item= document.getElementById("It_C").value;
+	console.log(name);
+	var xhttp= new XMLHttpRequest()
+	xhttp.open("POST", "/ChestS", true)
+	xhttp.setRequestHeader("Content-Type", "application/json")
+	xhttp.send(JSON.stringify({name:name,mag:mag,loc:loc,item:item}))
+	//xhttp.open("GET", "/ChestS", true)
+	console.log(#{table.cName});
+	console.log("baba")
+	/*xhttp.setRequestHeader("Content-Type", "application/json")
+	xhttp.send()
+	alert("bet")*/
+	}
+</script>
+
+</body>
+</html>
